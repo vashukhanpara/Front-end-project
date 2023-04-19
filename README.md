@@ -22,4 +22,5 @@ Preview for this website in screen 200px to 425x is :
 |  #  | Project | Preview
 | --- | ------------------------------------------------ | -------------------- 
 | 01  | [Le college](https://github.com/vashukhanpara/Front-end-project/blob/bc890e40fe5a28f87084eeb7f736d46872fe9941/le%20college.html)| [Preview](https://github.com/vashukhanpara/Le-College-Project/files/11273204/New.Compressed.zipped.Folder.zip)
+| 01.1  | [Le college](https://github.com/vashukhanpara/Front-end-project/blob/bc890e40fe5a28f87084eeb7f736d46872fe9941/le%20college.html)| [Preview](https://github.com/vashukhanpara/Le-College-Project/files/11273272/Le.college.project.recording.in.mobile.view.zip)
 | 02  | [Sardar vallabh bhai patel](https://github.com/smthari/Frontend-Projects/tree/master/Animated%20profile%20card)| [Preview](https://profile-card-animation.netlify.app/)
