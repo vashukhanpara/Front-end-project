@@ -20,8 +20,13 @@ Some websites are resposive for mobile screen
 | 02  | [Sardar vallabh bhai patel](https://github.com/vashukhanpara/Front-end-project/blob/d58e5b395a6df2848e9f090e3ad72254d1767c70/sardar_vallabhbhai.html)| [Preview](https://github.com/vashukhanpara/Front-end-project/files/11273844/sardar.project.preview.recording.zip)
 
 
-
- About Le college project:
+## Basic  About Le College Project:
+## A second-level heading
 In this project i put some basic details about college like about college , courses of college , campus of college , activity which often happen in college , other basic details.
 
 This website i have make responsive using media-query with mobile screen 200px to 425px
+
+## Basic Sardar vallabh bhai patel Project:
+in this project i put some basic information about sardar vallabh bhai patel using just html, css 
+in this project some personal details about sardar vallabh bhai patel has also putted
+and more details like 'Early Life And Career' , 'Partition And Independence' also has mantioned 
