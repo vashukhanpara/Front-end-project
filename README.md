@@ -25,7 +25,7 @@ In this project i put some basic details about college like about college , cour
 
 This website i made responsive using media-query with mobile screen 200px to 425px
 
-### Basic Sardar vallabh bhai patel Project:
+### Basic Sardar About vallabh bhai patel Project:
 in this project i put some basic information about sardar vallabh bhai patel using just html, css 
 in this project some personal details about sardar vallabh bhai patel has also putted
 and more details like 'Early Life And Career' , 'Partition And Independence' also has mantioned 
