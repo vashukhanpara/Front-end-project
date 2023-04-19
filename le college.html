@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>le college</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            color: gray;
+        }
+
+        h1 {
+            font-size: xx-large;
+        }
+
+        body {
+            background-color: rgb(255, 255, 255);
+            overflow-x: hidden;
+        }
+
+        .header {
+            width: 100%;
+            /* min-height: 100vh; */
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('lecollege/le.jpg');
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between;
+            background-color: rgb(255, 157, 36, 0.3);
+            align-items: center;
+            height: 10%;
+        }
+
+        /* .left_navigation {
+            background-color: aqua;
+        } */
+
+        .left_navigation h2 {
+            float: left;
+            margin-top: 5%;
+            color: rgb(0, 255, 217);
+        }
+
+        nav img {
+            width: 20%;
+            height: 10%;
+            float: left;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .right_navigation {
+            flex: 1;
+            /* it may be 0 or 1 */
+            text-align: right;
+            /* background-color: blue; */
+        }
+
+        .right_navigation ul li {
+            list-style: none;
+            display: inline;
+            margin: 1.5%;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .right_navigation ul li a {
+            color: rgb(0, 255, 217);
+            font-size: large;
+            text-decoration: none;
+            /* by this we can remover underline( of ancor)*/
+        }
+
+
+        /* text box-----------*/
+        .text-box {
+            margin-top: 5%;
+        }
+
+        .text-box h1 {
+            text-transform: capitalize;
+            text-align: center;
+            color: rgb(222, 255, 33);
+            font-size: xx-large;
+            background-color: transparent;
+            border-radius: 5px;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .text-box p {
+            text-align: left;
+            color: white;
+            margin-left: 10%;
+            margin-right: 10%;
+            word-spacing: 1%;
+            line-height: 140%;
+            font-size: larger;
+        }
+
+        .text-box button {
+            background-color: transparent;
+            color: white;
+            border: white 1px solid;
+            padding: 1.5%;
+            font-size: large;
+            margin-bottom: 2%;
+        }
+
+        /* course----------------------- */
+        .course {
+            padding-top: 2%;
+            margin: 2%;
+            text-align: center;
+            background-color: transparent;
+            /* width: 80%; */
+            border-radius: 6px;
+        }
+
+        .course h1 {
+            background-color: transparent;
+            border-radius: 5px;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .row {
+            max-height: 220px;
+            margin-top: 2%;
+            column-count: 3;
+            column-gap: 5%;
+            column-width: 250px;
+            column-rule: 2px solid rgb(89, 0, 255);
+            overflow: auto;
+            padding-top: 3%;
+            padding-left: 3%;
+        }
+
+        /* scroll bar editor-------------- */
+        /* width */
+        .row::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        .row::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 5px;
+        }
+
+        /* Handle */
+        .row::-webkit-scrollbar-thumb {
+            background-color: rgb(89, 0, 255);
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        .row::-webkit-scrollbar-thumb:hover {
+            border: black solid 1px;
+        }
+
+        .row div {
+            background-color: antiquewhite;
+            border-radius: 7.5px;
+            box-sizing: border-box;
+            padding: 2%;
+        }
+
+        .row div h3 {
+            text-transform: capitalize;
+            margin-bottom: 2%;
+            margin-top: 2%;
+
+        }
+
+        .row p {
+            margin: 5%;
+            color: rgb(0, 0, 0, 0.5);
+        }
+
+        /* --campus--------------- */
+        .campus {
+            text-transform: capitalize;
+            margin: 2%;
+            text-align: center;
+            background-color: transparent;
+            border-radius: 6px;
+            padding-top: 2%;
+
+            /* background-color: aqua; */
+        }
+
+        .campus h1 {
+            background-color: transparent;
+            border-radius: 5px;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .campus-photo {
+            column-count: 3;
+            /* background-color: blueviolet; */
+            display: block;
+        }
+
+        .campus-photo div {
+            background: transparent;
+        }
+
+        .campus-photo div img {
+            height: 300px;
+            width: 250px;
+            margin: 5%;
+            margin-bottom: 1.5%;
+            border-radius: 3%;
+        }
+
+        .campus-photo div h3 {
+            transform: translateY(-200px);
+            color: rgb(255, 255, 255);
+            text-shadow: 03px 3px 3px rgb(16, 23, 229);
+            /* font */
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        /* activity------------------- */
+        .activity {
+            background-color: transparent;
+            border-radius: 6px;
+            margin-top: 8%;
+            text-align: center;
+            text-transform: capitalize;
+            margin: 2%;
+            padding-top: 2%;
+        }
+
+        .activity p {
+            margin-top: 1%;
+        }
+
+        .activity h1 {
+            background-color: transparent;
+            border-radius: 5px;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .activity-col {
+            display: flex;
+        }
+
+        .activity-col h3 {
+            margin-top: 2%;
+        }
+
+        .activity-col p {
+            margin-top: 2%;
+            width: 70%;
+            /* text-align: left; */
+            margin-left: 20%;
+        }
+
+
+        .activity-col div img {
+            height: 60%;
+            width: 245px;
+            margin: 30px;
+            margin-bottom: 0;
+            border-radius: 2%;
+        }
+
+        /* faculty------------ */
+        .faculty {
+            background-color: transparent;
+            text-align: center;
+            margin: 2%;
+            text-transform: capitalize;
+            padding-top: 2%;
+            border-radius: 5px;
+
+
+        }
+
+        .faculty h1 {
+            background-color: transparent;
+            border-radius: 5px;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .faculty-img {
+            /* float: left; */
+            width: 100%;
+            margin-bottom: 2%;
+        }
+
+        .faculty-img img {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            margin: 2%;
+        }
+
+        .cta {
+            text-align: center;
+            background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url('lecollege/education.avif');
+            background-position: center;
+            border-radius: 5px;
+            background-size: cover;
+            padding: 100px;
+            margin: 2%;
+        }
+
+        .cta h1 {
+            color: white;
+            text-transform: capitalize;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        .cta .contact-us {
+            margin-top: 3%;
+            background-color: transparent;
+            color: white;
+            padding: 1%;
+            transition: 0.5s;
+            font-size: large;
+        }
+
+
+        /* footer---------- */
+        .footer {
+            text-align: center;
+            margin: 2%;
+            margin-top: 10%;
+        }
+
+        .footer h3 {
+            text-transform: capitalize;
+        }
+
+        .footer p {
+            width: 80%;
+            margin-left: 12%;
+            margin-top: 2%;
+        }
+
+        /* hovers------------------------------ */
+
+        .right_navigation ul li a:hover {
+            color: red;
+            transform: scale(5);
+            /* aa chaltu nathi e kem e nathi khabar padti*/
+            font-size: larger;
+        }
+
+        .text-box button:hover {
+            transform: scale(1.08, 1.08);
+            transition: 0.5s;
+        }
+
+        .row div:hover {
+            box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .campus-photo div img:hover {
+            opacity: 0.5;
+        }
+
+        .campus-photo div:hover h3 {
+            opacity: 1;
+        }
+
+        .cta .contact-us:hover {
+            transform: scale(1.2);
+        }
+
+        /*media query---------------*/
+        @media only screen and (min-width:200px) and (max-width:425px) {
+            .left_navigation h2 {
+                font-size: small;
+            }
+
+            .right_navigation ul li a {
+                font-size: x-small;
+            }
+
+            .right_navigation ul li {
+                display: block;
+            }
+
+            .text-box h1 {
+                font-size: large;
+            }
+
+            .text-box p {
+                font-size: small;
+            }
+
+            .text-box button {
+                padding: 1.5%;
+                font-size: small;
+            }
+
+            .campus-photo {
+                column-count: 1;
+                /* background-color: blueviolet; */
+                display: block;
+            }
+
+            .campus-photo div img {
+                height: 200px;
+                width: 80%;
+                margin: 5%;
+                margin-bottom: 1.5%;
+            }
+
+            .activity-col {
+                display: block;
+            }
+
+            .activity-col div img {
+                height: 60%;
+                width: 70%;
+                margin: 30px;
+                margin-bottom: 0;
+                border-radius: 2%;
+            }
+
+            .cta {
+                padding: 50px;
+            }
+
+            .cta h1 {
+                font-size: small;
+            }
+
+            .cta .contact-us {
+                font-size: smaller;
+                margin-top: 4%;
+                padding: 3%;
+            }
+
+            /* hovers in media query-----------*/
+            .right_navigation ul li a:hover {
+                /* aa chaltu nathi e kem e nathi khabar padti*/
+                font-size: small;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header----------------- -->
+    <section class="header">
+        <nav>
+            <div class="left_navigation">
+                <a href=""><img src="lecollege/collage_logo.png" title="collge logo" />
+                    <h2>L.E. COLLEGE</h2>
+                </a>
+            </div>
+            <div class="right_navigation">
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="">about</a></li>
+                    <li><a href="">blog</a></li>
+                    <li><a href="">course</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1>more about l.e. college</h1>
+            <br />
+            <p>Lukhdhirji Engineering College , popularly known as L.E. college or LEC morbi is located in the morbi
+                distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT) was
+                established in 1931 by the Commissionerate of Technical Education (CTE), the Government of Gujarat. The
+                campus of the college spreads over an area of 40 acres of land. Lukhdhirji Engineering College, Morbi is
+                affiliated to Gujarat Technological University. The college offers Diploma, B.E/B.Tech and M.E
+                programmes. The programmes are approved by the All India Council for Technical Education (AICTE). <br />
+                <center>
+                    <button>visit us to know more</button>
+                </center>
+            </p>
+        </div>
+    </section>
+    <!-- course------------- -->
+    <section class="course">
+        <h1>Courses of L.E. college</h1>
+        <p> distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT) was
+            distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT) was </p>
+        <div class="row">
+            <div class="course-col1">
+                <h3>be in ceramic</h3>
+                <p>distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT) was
+                    distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT)
+                    was </p>
+                <!-- <img src="lecollsege/itdepartment.jpg" title="ceramic building" height="40%" width="40%" />
+                <br />
+                <img src="lecollege/old campus.jpg" title="ceramic building" height="40%" width="40%" /> -->
+
+            </div>
+
+            <div class="course-col2">
+                <h3> be in mechanical</h3>
+                <p>distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT) was
+                    distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT)
+                    was </p>
+                <!-- <img src="lecollege/itdepartment.jpg" title="ceramic building" height="40%" width="40%" />
+                <br />
+                <img src="lecollege/old campus.jpg" title="ceramic building" height="40%" width="40%" />
+            -->
+            </div>
+
+            <div class="course-col3">
+                <h3>be in it</h3>
+                <p>distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT) was
+                    distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT)
+                    was</p>
+                <!-- <img src="lecollege/itdepartment.jpg" title="ceramic building" height="40%" width="40%" />
+                <br />
+                <img src="lecollege/old campus.jpg" title="ceramic building" height="40%" width="40%" />
+            -->
+            </div>
+            <div class="course-col4">
+                <h3>be in electrical</h3>
+                <p>distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT) was
+                    distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT)
+                    was </p>
+                <!-- <img src="lecollege/itdepartment.jpg" title="ceramic building" height="40%" width="40%" />
+                <br />
+                <img src="lecollege/old campus.jpg" title="ceramic building" height="40%" width="40%" />
+            -->
+            </div>
+            <div class="course-col5">
+                <h3>be in civil</h3>
+                <p>distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT) was
+                    distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT)
+                    was </p>
+                <!-- <img src="lecollege/itdepartment.jpg" title="ceramic building" height="40%" width="40%" />
+                <br />
+                <img src="lecollege/old campus.jpg" title="ceramic building" height="40%" width="40%" />
+            -->
+            </div>
+            <div class="course-col6">
+                <h3>be in chemical</h3>
+                <p>distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT) was
+                    distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT)
+                    was </p>
+                <!-- <img src="lecollege/itdepartment.jpg" title="ceramic building" height="40%" width="40%" />
+                <br />
+                <img src="lecollege/old campus.jpg" title="ceramic building" height="40%" width="40%" />
+            -->
+            </div>
+            <div class="course-col7">
+                <h3>be in production</h3>
+                <p>distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT) was
+                    distric .Lukhdhirji Engineering College, Morbi, formerly known as Morbi Technical Institute (MIT)
+                    was</p>
+                <!-- <img src="lecollege/itdepartment.jpg" title="ceramic building" height="40%" width="40%" />
+                <br />
+                <img src="lecollege/old campus.jpg" title="ceramic building" height="40%" width="40%" />
+            -->
+            </div>
+        </div>
+    </section>
+    <!-- campus------------- -->
+    <div class="campus">
+        <h1>le college campus</h1>
+        <div class="campus-photo">
+            <div class="first-campus">
+                <img src="lecollege/itdepartment.jpg" title="it building" />
+                <div class="layer">
+                    <h3>it building</h3>
+                </div>
+            </div>
+            <div class="second-campus">
+                <img src="lecollege/old campus.jpg" title="civil building" />
+                <div class="layer">
+                    <h3>civil building</h3>
+                </div>
+            </div>
+            <div class="third-campus">
+                <img src="lecollege/old campus.jpg" title="ceramic building" />
+                <div class="layer">
+                    <h3>ceramic building</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- activity------------------- -->
+    <section class="activity">
+        <h1>our college activity</h1>
+        <p>The most important benefit of extra-curricular activities is that it helps the students in boosting their
+            social skills and helps in self-development. Communication is a vital asset in students' lives and it helps
+            the students to explore their freedom of speech in the right way!</p>
+        <div class="activity-col">
+            <div class="activity-first-col">
+                <img src="lecollege/tree plant activity.jpg" title="tree plant activity" />
+                <h3>tree plant activity</h3>
+                <p>these are the activities from l.e. college</p>
+            </div>
+            <div class="activity-second-col">
+                <img src="lecollege/garba activity.jpg" title="garba activity" />
+                <h3>garba activity</h3>
+                <p>these are the activities from l.e. college</p>
+
+            </div>
+            <div class="activity-third-col">
+                <img src="lecollege/volleyball activity.jpg" title="volleyball activity" />
+                <h3>volleyball activity</h3>
+                <p>these are the activities from l.e. college</p>
+
+            </div>
+        </div>
+    </section>
+    <!-- faculty------------- -->
+    <section class="faculty">
+        <h1>our faculty</h1>
+        <div class="faculty-img">
+            <img src="lecollege/manoj faculty.jpg" title="faculty photo" />
+            <img src="lecollege/tejas faculty.jpg" title="faculty photo" />
+            <img src="lecollege/rahul faculty.jpg" title="faculty photo" />
+            <img src="lecollege/shivani faculty.jpg" title="faculty photo" />
+            <img src="lecollege/dhairavi faculty.jpg" title="faculty photo" />
+            <img src="lecollege/bheda faculty.jpg" title="faculty photo" />
+            <img src="lecollege/faculty.jpg" title="faculty photo" />
+        </div>
+    </section>
+    <!-- call to action -->
+    <section class="cta">
+        <h1>visit our college from any where</h1>
+        <a><button class="contact-us"> contact us</button></a>
+    </section>
+
+    <section class="footer">
+        <h3>about us</h3>
+        <p>Initially as Lukhdhirji Engineering College offered courses in Engineering like Civil, Mechanical and
+            Electrical Engineering. Gradually, the diversified disciplined like Industrial, Production, Power
+            Electronics and Information Technology, Chemical Engineering, Applied Mechanics were introduced</p>
+
+    </section>
+</body>
+
+</html>
+
+<!-- /* .campus {
+    max-height: 250px;
+    column-count: 3;
+    column-width: 250px;
+    column-rule: 2px solid rgb(89, 0, 255);
+    overflow: auto;
+    padding-left: 3%;
+} */ -->
+<!-- <div class="campus">
+    <div class="campus-col1">
+        <img src="lecollege/itdepartment.jpg" title="ceramic building" height="40%" width="40%" />
+        <br />
+        <img src="lecollege/old campus.jpg" title="ceramic building" height="40%" width="40%" />
+    </div>
+
+    <div class="campus-col2">
+        <img src="lecollege/itdepartment.jpg" title="mechanical building" height="40%" width="40%" />
+        <br />
+        <img src="lecollege/old campus.jpg" title="mechanical building" height="40%" width="40%" />
+    </div>
+
+    <div class="campus-col3">
+        <img src="lecollege/itdepartment.jpg" title="it building" height="40%" width="40%" />
+        <br />
+        <img src="lecollege/old campus.jpg" title="it building" height="40%" width="40%" />
+
+    </div>
+    <div class="campus-col4">
+        <img src="lecollege/itdepartment.jpg" title="electrical building" height="40%" width="40%" />
+        <br />
+        <img src="lecollege/old campus.jpg" title="electrical building" height="40%" width="40%" />
+
+    </div>
+    <div class="campus-col5">
+        <img src="lecollege/itdepartment.jpg" title="civil building" height="40%" width="40%" />
+        <br />
+        <img src="lecollege/old campus.jpg" title="civil building" height="40%" width="40%" />
+
+    </div>
+    <div class="campus-col6">
+        <img src="lecollege/itdepartment.jpg" title="chemical building" height="40%" width="40%" />
+        <br />
+        <img src="lecollege/old campus.jpg" title="chemical building" height="40%" width="40%" />
+
+    </div>
+    <div class="campus-col7">
+        <img src="lecollege/itdepartment.jpg" title="production building" height="40%" width="40%" />
+        <br />
+        <img src="lecollege/old campus.jpg" title="production building" height="40%" width="40%" />
+    </div>
+
+
+
+
+-faculty-img vadi div ma float left karvathi nicheno content uparna ma kem avi jai 6
+ -   slide is not being properly in le college campus
+-only photo ma karie tyare hover thavu joie
+-photo ma text 6 tyare pan hover thavu joie
+-
+-
+-
+</div> -->
