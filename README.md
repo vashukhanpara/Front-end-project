@@ -12,3 +12,6 @@ This website is resposive for mobile screen
 Preview for this website is :
 [New Compressed (zipped) Folder.zip](https://github.com/vashukhanpara/Le-College-Project/files/11273204/New.Compressed.zipped.Folder.zip)
 
+Preview for this website in screen 200px to 425x is : 
+
+[Le college project recording in mobile view.zip](https://github.com/vashukhanpara/Le-College-Project/files/11273272/Le.college.project.recording.in.mobile.view.zip)
