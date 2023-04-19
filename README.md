@@ -15,3 +15,11 @@ Preview for this website is :
 Preview for this website in screen 200px to 425x is : 
 [Le college project recording in mobile view.zip](https://github.com/vashukhanpara/Le-College-Project/files/11273272/Le.college.project.recording.in.mobile.view.zip)
 
+
+
+
+
+|  #  | Project | Live Demo 
+| --- | ------------------------------------------------ | -------------------- 
+| 01  | [3d social media icon](https://github.com/smthari/Frontend-Projects/tree/master/3d%20social%20media%20icons)| [Live Demo](https://3d-social-media-icons.netlify.app/)
+| 02  | [Profile Card](https://github.com/smthari/Frontend-Projects/tree/master/Animated%20profile%20card)| [Live Demo](https://profile-card-animation.netlify.app/)
