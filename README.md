@@ -9,3 +9,6 @@ The purpose for making website is just practise for html,css,mediaquery
 
 This website is resposive for mobile screen
 
+Preview for this website is :
+[New Compressed (zipped) Folder.zip](https://github.com/vashukhanpara/Le-College-Project/files/11273204/New.Compressed.zipped.Folder.zip)
+
